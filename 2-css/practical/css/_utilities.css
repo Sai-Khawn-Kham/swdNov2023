@@ -1,0 +1,44 @@
+.rounded {
+  border-radius: 10px;
+}
+
+.rounded-pill {
+  border-radius: 100px;
+}
+
+.mb-5 {
+  margin-bottom: 5px;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
+}
+
+.mb-50 {
+  margin-bottom: 50px !important;
+}
+
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.w-full {
+  width: 100% !important;
+}
+
+.p-0 {
+  padding: 0px !important;
+}
+
+.p-15 {
+  padding: 15px;
+}
