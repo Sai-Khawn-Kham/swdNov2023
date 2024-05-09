@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 50px;
+}
+
+.sq1{
+    border: 30px solid skyblue;
+    display: inline-block;
+}
+
+.price-tag{
+    background-color: skyblue;
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 10px;
+    position: relative;
+    left: 15px;
+}
+
+.price-tag:before{
+    content: "";
+    border: 15px solid transparent;
+    display: inline-block;
+    position: absolute;
+    border-right-color: skyblue;
+    border-left-width: 0;
+    left: -14.5px;
+
+}
+
+.price-tag:after{
+    content: "";
+    width: 7px;
+    height: 7px;
+    background-color: white;
+    position: absolute;
+    border-radius: 50%;
+    left: -9px;
+    top: 11px;
+}
