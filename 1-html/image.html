@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Img Tag</title>
+    <style>
+        img{
+            width:200px;
+            height:auto;
+        }
+        picture{
+            width:200px;
+            height:auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Img Tag</h1>
+
+    <img src="./assets/images/poe-mamhe-thar-7.jpg" alt="" usemap="#map1">
+    <map name="map1">
+        <area shape="rect" coords="34,44,270,350" href="javascript:alert('rectangle map');" alt="">
+        <area shape="circle" coords="337,300,44" href="javascript:alert('circle map')" alt="">
+        <area shape="poly" coords="" href="" alt="">
+    </map>
+
+    <br>
+
+    <picture>
+        <source media="(min-width:650px)" srcset="./assets/images/poe-mamhe-thar-2.jpg" type="image/jpg">
+        <source media="(min-width:465px)" srcset="./assets/images/poe-mamhe-thar-3.jpeg" type="image/jpeg">
+        <img src="./assets/images/poe-mamhe-thar-6.jpg" alt="">
+    </picture>
+
+</body>
+</html>

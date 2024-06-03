@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form </title>
+</head>
+
+<body>
+    <h1>Form</h1>
+
+    <!-- form 
+        nover use get method attr for sensitive data
+        use enctype attr with "multipart/form" value for big file
+     -->
+
+    <!-- fieldset and legend  -->
+    <form action="">
+        <fieldset>
+            <legend>register form</legend>
+            <label for="name">Name: </label>
+            <input type="text" name="name" id="name">
+
+            <br>
+            <label for="email">Email: </label>
+            <input type="email" name="email" id="email">
+            <br>
+
+            <label for="">Gender: </label>
+            <input type="radio" name="gender" id="male">
+            <label for="male">Male</label>
+            <input type="radio" name="gender" id="female">
+            <label for="female">Female</label>
+            <br>
+
+
+            <label for="">Skill: </label>
+            <input type="checkbox" name="skill" id="html">
+            <label for="html">HTML</label>
+            <input type="checkbox" name="skill" id="css">
+            <label for="css">CSS</label>
+            <input type="checkbox" name="SKILL" id="js">
+            <label for="js">JavaScript</label>
+            <br>
+
+            <button type="submit">Submit</button>
+        </fieldset>
+    </form>
+    <br>
+
+    <!-- input and label  -->
+    <form action="">
+        <label for="name">Name: </label>
+        <input type="text" name="name" id="name"> <!-- if omit the value of name attr form data will not send -->
+        <br>
+        <label for="email">Email: </label>
+        <input type="email" name="email" id="email">
+        <br>
+        <button type="submit">Submit</button> <!-- if form have more than one input use submit btn -->
+    </form>
+    <br>
+
+    <!-- radio btn  -->
+    <form action="">
+        <label for="">Gender: </label>
+        <input type="radio" name="gender" id="male">
+        <label for="male">Male</label>
+        <input type="radio" name="gender" id="female">
+        <label for="female">Female</label>
+    </form>
+
+    <!-- checkbox -->
+    <form action="">
+        <label for="">Skill: </label>
+        <input type="checkbox" name="skill" id="html">
+        <label for="html">HTML</label>
+        <input type="checkbox" name="skill" id="css">
+        <label for="css">CSS</label>
+        <input type="checkbox" name="SKILL" id="js">
+        <label for="js">JavaScript</label>
+    </form>
+
+    <!-- textarea  -->
+
+    <!-- select element -->
+
+    <!-- button element  -->
+
+
+</body>
+
+</html>

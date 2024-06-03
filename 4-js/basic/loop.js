@@ -254,7 +254,6 @@ const product = [
 // 6. CopyArray, Modified Array, Filter Array
 
 
-
 // Problems
 // 3 x 3 square လေးဖန်တီးရအောင်
 // * * *
