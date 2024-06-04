@@ -1,0 +1,121 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.outside {
+  background-color: #ddd;
+  margin: 20px;
+  width: 500px;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.box {
+  position: relative;
+  border: 1.5px solid black;
+  height: 300px;
+  /* perspective: 1000px; */
+}
+
+.obj1 {
+  width: 270px;
+  transform: translate(-130%, -130%);
+  transition-duration: 500ms;
+  transition-delay: 500ms;
+}
+
+.box:hover .obj1 {
+  transform: translate(0%);
+}
+
+.obj2 {
+  width: 150px;
+  transition-duration: 500ms;
+  transition-delay: 700ms;
+  margin: 60px 50px;
+}
+
+.box:hover .obj2 {
+  transform: rotate(45deg);
+  transition-timing-function: linear(0 0%, 0 2.27%, 0.02 4.53%, 0.04 6.8%, 0.06 9.07%, 0.1 11.33%, 0.14 13.6%, 0.25 18.15%, 0.39 22.7%, 0.56 27.25%, 0.77 31.8%, 1 36.35%, 0.89 40.9%, 0.85 43.18%, 0.81 45.45%, 0.79 47.72%, 0.77 50%, 0.75 52.27%, 0.75 54.55%, 0.75 56.82%, 0.77 59.1%, 0.79 61.38%, 0.81 63.65%, 0.85 65.93%, 0.89 68.2%, 1 72.7%, 0.97 74.98%, 0.95 77.25%, 0.94 79.53%, 0.94 81.8%, 0.94 84.08%, 0.95 86.35%, 0.97 88.63%, 1 90.9%, 0.99 93.18%, 0.98 95.45%, 0.99 97.73%, 1 100%);
+}
+
+.obj3 {
+  width: 150px;
+  margin: 50px;
+  transition-duration: 500ms;
+}
+
+.box:hover .obj3 {
+  transform: scale(1.3);
+}
+
+.obj4 {
+  width: 170px;
+  margin: 50px 50px;
+  transition-duration: 500ms;
+}
+
+.box:hover .obj4 {
+  transform: skew(-20deg);
+}
+
+.obj5 {
+  width: 170px;
+  margin: 50px 50px;
+  transition-duration: 500ms;
+}
+
+.box:hover .obj5 {
+  transform: matrix(
+    scaleX(1.5),
+    skewY(20deg),
+    skewX(20deg),
+    scaleY(1.5),
+    translateX(20px),
+    translateY(20px)
+  );
+}
+
+.box2 {
+  position: relative;
+  border: 1.5px solid black;
+  height: 300px;
+  perspective: 1000px;
+}
+
+.obj6 {
+  width: 250px;
+  transition-duration: 500ms;
+  transition-delay: 500ms;
+}
+
+.box2:hover .obj6 {
+  transform: translateZ(-100px);
+}
+
+.obj7 {
+  width: 150px;
+  transition-duration: 500ms;
+  transition-delay: 500ms;
+  margin: 70px;
+}
+
+.box2:hover .obj7 {
+  transform: rotateZ(45deg);
+  transform-origin: 100% 100%;
+  transition-timing-function: linear(0 0%, 0 2.27%, 0.02 4.53%, 0.04 6.8%, 0.06 9.07%, 0.1 11.33%, 0.14 13.6%, 0.25 18.15%, 0.39 22.7%, 0.56 27.25%, 0.77 31.8%, 1 36.35%, 0.89 40.9%, 0.85 43.18%, 0.81 45.45%, 0.79 47.72%, 0.77 50%, 0.75 52.27%, 0.75 54.55%, 0.75 56.82%, 0.77 59.1%, 0.79 61.38%, 0.81 63.65%, 0.85 65.93%, 0.89 68.2%, 1 72.7%, 0.97 74.98%, 0.95 77.25%, 0.94 79.53%, 0.94 81.8%, 0.94 84.08%, 0.95 86.35%, 0.97 88.63%, 1 90.9%, 0.99 93.18%, 0.98 95.45%, 0.99 97.73%, 1 100%);
+}
+
+.obj8{
+    width: 150px;
+    transition-duration: 500ms;
+    transition-delay: 500ms;
+    margin: 10px;
+}
+
+.box2:hover obj8{
+    transform: scale3d(111.33%);
+}

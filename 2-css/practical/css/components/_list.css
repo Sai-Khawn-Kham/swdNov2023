@@ -1,3 +1,58 @@
+.sidebar{
+  display: inline-block;
+  width: 200px;
+  background-color: #222;
+  color: #aaa;
+  padding: 15px;
+  border-radius: 5px;
+  margin:20px 0;
+}
+
+.sb-h{
+  font-size: 20px;
+  margin: 7px 0;
+  color: #aaa;
+}
+
+.sidebar hr{
+  margin: 10px 0 10px -15px
+}
+
+.sidebar li{
+  height: 40px;
+  border-radius: 5px;
+  padding: 10px 20px;
+}
+
+.sidebar li:hover{
+  background-color: rgb(3,3,3);
+}
+
+.sidebar #active{
+  background-color: rgb(100,100,100);
+}
+
+.hor-menu{
+  background-color: #222;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.hor-menu .menuitem{
+  text-decoration: none;
+  color: #aaa;
+  padding: 7px 10px;
+}
+
+.hor-menu .menuitem:hover{  
+  background-color: rgb(60,60,60);
+}
+
+.hor-menu #active{  
+  background-color: rgb(100,100,100);
+
+}
+
 .list {
   list-style-type: none;
   border: 1px solid black;

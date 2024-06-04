@@ -1,0 +1,45 @@
+.outside {
+  width: 600px;
+  background-color: #ddd;
+  padding: 20px;
+  border-radius: 10px;
+}
+.container {
+  position: relative;
+}
+img {
+  width: 100%;
+  height: auto;
+  opacity: 0.5;
+}
+.topleft {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+  font-size: 18px;
+}
+.topright {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+  font-size: 18px;
+}
+.center {
+  position: absolute;
+  top: 50%;
+  left: 270px;
+  text-align: center;
+  font-size: 18px;
+}
+.bottomleft {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+  font-size: 18px;
+}
+.bottomright {
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+  font-size: 18px;
+}

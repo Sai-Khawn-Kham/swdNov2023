@@ -38,3 +38,64 @@
   padding: 0;
   width: 50px;
 }
+
+.neuro{
+  border: 1px solid white;
+  margin: 0 20px 0 0;
+  color: #444;
+  box-shadow:
+    4px 4px 4px 2px #666 inset,
+    -4px -4px 4px 1px #ccc inset,
+    4px 4px 4px 1px #666,
+    -4px -4px 4px 1px #ccc;
+}
+
+.neuro-in{
+  border: none;
+  margin: 0 20px 0 0;
+  color: #444;
+  box-shadow: 
+    4px 4px 4px 1px #777 inset, 
+    -4px -4px 4px 1px #ccc inset;
+}
+
+.neuro-out{
+  border: none;
+  margin: 0 20px 0 0;
+  color: #444;
+  box-shadow: 
+    3px 3px 2px 1px #555,
+    -3px -3px 2px 1px #ddd;
+}
+
+.btn-leaf{
+  border-radius: 0 20px 0 20px;
+}
+
+.btn-egg{
+  padding: 0 15px;
+  border-radius: 60%;
+}
+
+.shadow-btn{
+  border-radius: 10px;
+  box-shadow: 0 5px 10px 5px var(--blue-shadow);
+}
+
+.btn-noti{
+  border-radius: 10px;
+  display: inline-block;
+  position: relative;
+}
+
+.btn-noti::before{
+  content: "12";
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  font-size: 12px;
+  border-radius: 20px;
+  background-color: var(--pink);
+  position:absolute;
+  transform: translate(90px,-8px);
+}

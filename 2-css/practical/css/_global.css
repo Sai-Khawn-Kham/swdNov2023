@@ -10,6 +10,10 @@
   font-size: 15px;
 }
 
+body{
+  background-color: #eee;
+}
+
 main {
   padding: 20px;
 }

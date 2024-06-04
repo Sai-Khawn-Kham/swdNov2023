@@ -1,0 +1,9 @@
+.box-shadow{
+    display: inline-block;
+    box-shadow: 3px 3px 2px 1px rgba(0,0,0,0.5);
+    padding: 3px 5px;
+}
+
+.text-shadow{
+    text-shadow: 3px 3px red, -3px -3px olive;
+}

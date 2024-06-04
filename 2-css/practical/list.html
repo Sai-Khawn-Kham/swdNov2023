@@ -1,63 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS List</title>
     <link rel="stylesheet" href="./css/app.css">
     <style>
-        body{
+        body {
             height: 3000px;
         }
     </style>
 </head>
+
 <body>
 
     <main>
+        <section>
+            <div class="hor-menu">
+                <a href="#" class="menuitem">Google</a>
+                <a href="#" class="menuitem" id="active">Youtube</a>
+                <a href="#" class="menuitem">Facebook</a>
+                <a href="#" class="menuitem">Gmail</a>
+            </div>
+
+            <div class="sidebar">
+                <h3 class="sb-h">sidebar menu</h3>
+                <ul style="list-style-type: none;">
+                    <li>search</li>
+                    <li id="active">home</li>
+                    <li>about us</li>
+                    <li>notification</li>
+                    <li>liked</li>
+                    <hr>
+                    <li>logout</li>
+                    <li>theme</li>
+                </ul>
+            </div>
+        </section>
 
         <section>
             <h1 class="heading">CSS List</h1>
 
-        <ul class="list list-hover rounded mb-20">
-            <li class="list-item">Apple</li>
-            <li class="list-item">Orange</li>
-            <li class="list-item">Mango</li>
-            <li class="list-item">Banana</li>
-        </ul>
+            <ul class="list list-hover rounded mb-20">
+                <li class="list-item">Apple</li>
+                <li class="list-item">Orange</li>
+                <li class="list-item">Mango</li>
+                <li class="list-item">Banana</li>
+            </ul>
 
-        <ul class="list rounded mb-20">
-            <li class="list-item text-center">Apple</li>
-            <li class="list-item active text-center">Orange</li>
-            <li class="list-item text-center">Mango</li>
-            <li class="list-item text-center">Banana</li>
-        </ul>
+            <ul class="list rounded mb-20">
+                <li class="list-item text-center">Apple</li>
+                <li class="list-item active text-center">Orange</li>
+                <li class="list-item text-center">Mango</li>
+                <li class="list-item text-center">Banana</li>
+            </ul>
 
-        <ul class="list rounded mb-20">
-            <li class="list-item">Apple</li>
-            <li class="list-item">Orange</li>
-            <li class="list-item">Mango</li>
-            <li class="list-item">Banana</li>
-        </ul>
-
+            <ul class="list rounded mb-20">
+                <li class="list-item">Apple</li>
+                <li class="list-item">Orange</li>
+                <li class="list-item">Mango</li>
+                <li class="list-item">Banana</li>
+            </ul>
         </section>
-        <section>
-            <h1 class="heading">CSS Menu</h1>
-            <div class="menu mb-20">
-                <a href="#" class="menu-item">Google</a>
-                <a href="#" class="menu-item active">Youtube</a>
-                <a href="#" class="menu-item">Facebook</a>
-                <a href="#" class="menu-item">Gmail</a>
-            </div>
-
-            <div class="menu menu-h mb-20">
-                <a href="#" class="menu-item">Google</a>
-                <a href="#" class="menu-item active">Youtube</a>
-                <a href="#" class="menu-item">Facebook</a>
-                <a href="#" class="menu-item">Gmail</a>
-            </div>
-        </section>
-        
     </main>
-    
 </body>
 </html>

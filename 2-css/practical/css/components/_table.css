@@ -29,7 +29,6 @@
   color: white;
 }
 
-
 .table-hover tbody tr:hover {
   background: var(--gray-hover);
 }
@@ -52,4 +51,24 @@
 
 .table-border-pink.table-strip tbody tr:nth-child(odd) {
   background-color: rgb(255, 247, 252);
+}
+
+.t2 {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.t2,
+.t2 th,
+.t2 td {
+  border-bottom: 1px solid black;
+  padding: 10px 15px;
+}
+
+.t2 tbody tr:hover {
+  background-color: var(--gray-hover);
+}
+
+.t2 tbody>tr:nth-child(odd){
+  background-color: var(--stripe);
 }
