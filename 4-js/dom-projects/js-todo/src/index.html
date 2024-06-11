@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./hover.css">
+</head>
+
+<body class="bg-stone-400">
+    <main id="root" class="p-5 w-[400px] min-h-[350px] max-h-[470px] overflow-x-hidden overflow-y-scroll bg-stone-100 mx-auto mt-10">
+        <header id="heading" class="font-serif font-bold text-3xl mb-3">Task Lists</header>
+
+        <section class="flex justify-between mb-3 outline">
+            <input type="text" id="textInput" class="flex-grow font-mono px-3 py-1 focus:outline-none">
+            <button id="addBtn">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="size-10 bg-stone-900 text-stone-100 outline-none">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                </svg>
+            </button>
+        </section>
+    
+        <section>
+            <div class="flex justify-between mb-3">
+                <h4 id="sub-title" class="text-xl font-bold font-serif">Your List<span id="subTitle-counter"></span></h4>
+                <div class="bg-stone-900 text-stone-100 rounded-full px-3 py-1 flex gap-1">
+                    Done<span id="doneTask">0</span><span>/</span><span id="allTask">0</span>
+                </div>
+            </div>
+    
+            <div class="listGroup " id="listGroup">
+                <div class="last:block hidden">
+                    <img src="./assets/images/img_5terre_wide.jpg" class="w-[250px] opacity-50 mx-auto" alt="">
+                    <p class="w-[200px] font-mono mx-auto">there is no task yet</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="./js/app.js"></script>
+</body>
+
+</html>
