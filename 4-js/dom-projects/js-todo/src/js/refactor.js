@@ -114,12 +114,24 @@ const deleteList = (listId) => {
 };
 
 // handler
-const addListHandler = () => {
+const addBtnHandler = (e) => {
     // console.log(textInput.value.trim() ? true : false);
-    if (textInput.value.trim()) {
-        addList(textInput.value);
-    } else {
-        alert("Input task");
+    // console.log(textInput.value.trim());
+        if (textInput.value.trim() != "") {
+            addList(textInput.value);
+        } else {
+            alert("Input task");
+    }
+};
+const textInputHandler = (e) => {
+    // console.log(textInput.value.trim() ? true : false);
+    // console.log(textInput.value.trim());
+    if(e.key == "Enter"){
+        if (textInput.value.trim() != "") {
+            addList(textInput.value);
+        } else {
+            alert("Input task");
+        }
     }
 };
 const listGroupHandler = (e) => {
@@ -136,6 +148,6 @@ const listGroupHandler = (e) => {
 };
 
 // listeners
-addBtn.addEventListener("click", addListHandler);
-textInput.addEventListener("change", addListHandler);
+addBtn.addEventListener("click", addBtnHandler);
+textInput.addEventListener("keyup", textInputHandler);
 listGroup.addEventListener("click", listGroupHandler);
