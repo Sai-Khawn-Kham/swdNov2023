@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation (JS Toggle)</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+    <header class="border-b-2 border-b-black py-5 fixed w-full z-50 bg-white">
+        <div class="w-[80%] mx-auto">
+            <div class="flex justify-between">
+                <h1 class="text-3xl font-bold font-serif">Logo</h1>
+                <button id="controlNav">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="size-9 stroke-3">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="h-20"></div>
+
+    <section id="sideBar" class="w-[300px] shadow-md duration-500 bg-white border-l-2 border-l-black h-screen pt-24 px-5 fixed right-0 translate-x-full z-40">
+        <nav class="flex flex-col">
+            <a class="font-serif mb-5 text-xl hover:bg-gray-200 p-5">Home</a>
+            <a class="font-serif mb-5 text-xl hover:bg-gray-200 p-5">About</a>
+            <a class="font-serif mb-5 text-xl hover:bg-gray-200 p-5">Services</a>
+        </nav>
+    </section>
+
+    <section  class="w-[80%] mx-auto my-4">
+        <h3 class="font-serif mb-4 text-xl font-bold">Select Your Skills ( <span id="skillCount">0</span> )</h3>
+        <ul class="flex gap-3">
+            <li class="list border border-black px-4 py-1">html </li>
+            <li class="list border border-black px-4 py-1">css </li>
+            <li class="list border border-black px-4 py-1">js </li>
+            <li class="list border border-black px-4 py-1">go</li>
+            <li class="list border border-black px-4 py-1">php</li>
+            <li class="list border border-black px-4 py-1">python</li>
+        </ul>
+    </section>
+
+    <section  class="w-[80%] mx-auto my-4">
+        <h3 class="font-serif mb-4 text-xl font-bold">Your Links</h3>
+        <div class="flex gap-3">
+            <a id="googleLink" href="https://goggle.com" target="_blank" class="link border border-black px-4 py-1">Google </a>
+            <a id="youtubeLink" href="https://youtube.com" target="_blank" class="link border border-black px-4 py-1">YouTube </a>
+        </div>
+    </section>
+
+    <section  class="w-[80%] mx-auto my-4">
+        <h3 class="font-serif mb-4 text-xl font-bold">Your Images</h3>
+        <div class="flex gap-3">
+            <img src="./assets/images/love.gif" alt="" class="img h-32" id="img1">
+            <img src="./assets/images/poe-mamhe-thar-2.jpg" alt="" class="img h-32" id="img2">
+            <img src="./assets/images/poe-mamhe-thar-3.jpeg" alt="" class="img h-32" id="img3">
+        </div>
+    </section>
+
+    <script src="./js/nav.js"></script>
+</body>
+
+</html>

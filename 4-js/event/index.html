@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #heading , .title{
+            border: 3px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="heading">JS event</h1>
+
+    <button id="eventPara">event parameter 1</button><br>
+    <button id="eventPara2">event parameter 2</button><br><br>
+
+    <a id="link" href="https://mms-it.com">event prevent Default (link to mms it)</a><br><br>
+
+    <button id="this1">this represent window in arrow function</button><br>
+    <button id="this2">this represent selected in function expression</button><br>
+    <button id="thisInnerText">this inner text (not recommend)</button><br>
+    <button id="Btn">selected inner text (recommend)</button><br><br>
+
+    <hr><br>
+
+    <h1 class="title">Event Target, Event</h1>
+
+    <button id="addEvent">add event listener (show click)</button><br>
+    <button id="removeEvent">remove event listener (remove show click)</button><br><br>
+
+    <hr><br>
+
+    <h3 class="title">Event bubbling, Event capturing, Event propagation</h3>
+
+    <div id="aa" style="border:3px solid red; padding:40px">
+        <div id="bb" style="border:3px solid red; padding:40px">
+            <div id="cc" style="border:3px solid red; padding:40px">
+                <button id="dd">click me</button>
+            </div>
+        </div>
+    </div><br>
+
+    <hr><br>
+
+    <h1 class="title">event listen to multiple element</h1>
+
+    <input type="text" id="textInput" value="new fruit">
+    <ul id="listGroup">
+        <li class="list">apple</li>
+        <li class="list">orange</li>
+        <li class="list">banana</li>
+        <li class="list">lemon</li>
+    </ul>
+
+    <hr><br>
+
+    <h2 class="title">multiple events listen to one element</h2>
+    <div class="title" id="playGround">Playground</div>
+    <input type="text" id="textInput2">
+    
+    <script src="./js/app.js"></script>
+</body>
+</html>

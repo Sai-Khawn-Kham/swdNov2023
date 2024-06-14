@@ -1,0 +1,23 @@
+@import url("../../node_modules/animate.css/animate.min.css");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* .list input:checked{
+    width: 50px;
+    height: 50px;
+} */
+
+.slide-in-down{
+    animation-name: slide-in-down;
+    animation-duration: 500ms;
+}
+@keyframes slide-in-down{
+    from{
+        transform: translateY(-30px);
+    }
+    to{
+        transform: translateY(0px);
+    }
+}

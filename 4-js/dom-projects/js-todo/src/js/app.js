@@ -6,7 +6,7 @@ const allTask = document.querySelector("#allTask");
 const doneTask = document.querySelector("#doneTask");
 
 // process
-textInput.focus();
+textInput.focus();  // cursor cha ya ma pyin loo
 const addList = () => {
     // mount list to listGroup
     // console.log(textInput.value);
@@ -18,7 +18,7 @@ const addList = () => {
 const updateTaskTotal = () => {
     // count list and update
     const listTotal = document.querySelectorAll(".list"); // select all element with class="list"
-    // console.log(listTotal); // output: nodelist (arr like object)
+    // console.log(listTotal); // output: nodeList (arr like object)
     allTask.innerText = listTotal.length;
 };
 
@@ -53,88 +53,40 @@ const createNewList = (currentTask) => {
     </div>
     `;
 
-    // const checkInput = list.querySelector(".checkInput");
-    // const listPara = list.querySelector(".listPara");
-    // const deleteBtn = list.querySelector(".deleteBtn");
-    // const twoBtn = list.querySelector(".twoBtn");
-    // const editBtn = list.querySelector(".editBtn");
-
-    // list.addEventListener("mouseover", () => {
-    //     twoBtn.classList.replace("translate-x-96","translate-x-0");
-    // });
-    // list.addEventListener("mouseout", () => {
-    //     twoBtn.classList.replace("translate-x-0","translate-x-96");
-    // });
-
-    // checkInput.addEventListener("click", () => {
-    //     updateDoneTask();
-    //     listPara.classList.toggle("line-through");
-    //     list.classList.toggle("opacity-70");
-    //     list.classList.toggle("scale-90");
-    //     list.classList.add("duration-200");
-    //     // list.classList.toggle("rotate-90");
-    //     // list.classList.toggle("origin-top-left");
-    //     checkInput.checked ? editBtn.setAttribute("disabled", true) : editBtn.removeAttribute("disabled");
-    // });
-
-    // editBtn.addEventListener("click", () => {
-    //     editBtn.setAttribute("disabled", true);
-    //     checkInput.setAttribute("disabled", true);
-    //     const currentText = listPara.innerText;
-    //     listPara.classList.add("hidden");
-    //     const newTextInput = document.createElement("input");
-    //     newTextInput.className = "border font-mono border-stone-950 h-6 focus:outline-none my-auto px-2 py-1";
-    //     newTextInput.value = currentText;
-    //     listPara.after(newTextInput);
-    //     newTextInput.focus();
-
-    //     newTextInput.addEventListener("blur", () => {
-    //         editBtn.removeAttribute("disabled");
-    //         checkInput.removeAttribute("disabled");
-    //         // console.log("edit finish");
-    //         listPara.innerText = newTextInput.value;
-    //         listPara.classList.remove("hidden");
-    //         newTextInput.remove();
-    //     });
-
-    // });
-
-    // deleteBtn.addEventListener("click", () => {
-    //     if (window.confirm("Are you sure to delete this task?")) {
-    //         list.remove();
-    //     }
-    // });
-
-    return list;
-};
-
-const listGroupHandler = (e) => {
-    const list = e.target.closest(".list");
     const checkInput = list.querySelector(".checkInput");
     const listPara = list.querySelector(".listPara");
     const deleteBtn = list.querySelector(".deleteBtn");
     const twoBtn = list.querySelector(".twoBtn");
     const editBtn = list.querySelector(".editBtn");
-    // console.log(list);
+
     list.addEventListener("mouseover", () => {
-        twoBtn.classList.replace("translate-x-96", "translate-x-0");
+        twoBtn.classList.replace("translate-x-96","translate-x-0");
     });
     list.addEventListener("mouseout", () => {
-        twoBtn.classList.replace("translate-x-0", "translate-x-96");
+        twoBtn.classList.replace("translate-x-0","translate-x-96");
     });
-    if (e.target.classList.contains("editBtn")) {
-        // console.log("u edit");
+
+    checkInput.addEventListener("click", () => {
+        updateDoneTask();
+        listPara.classList.toggle("line-through");
+        list.classList.toggle("opacity-70");
+        list.classList.toggle("scale-90");
+        list.classList.add("duration-200");
+        // list.classList.toggle("rotate-90");
+        // list.classList.toggle("origin-top-left");
+        checkInput.checked ? editBtn.setAttribute("disabled", true) : editBtn.removeAttribute("disabled");
+    });
+
+    editBtn.addEventListener("click", () => {
         editBtn.setAttribute("disabled", true);
         checkInput.setAttribute("disabled", true);
         const currentText = listPara.innerText;
         listPara.classList.add("hidden");
         const newTextInput = document.createElement("input");
-        newTextInput.className =
-            "border font-mono border-stone-950 h-6 focus:outline-none my-auto px-2 py-1";
+        newTextInput.className = "border font-mono border-stone-950 h-6 focus:outline-none my-auto px-2 py-1";
         newTextInput.value = currentText;
         listPara.after(newTextInput);
         newTextInput.focus();
-
         newTextInput.addEventListener("blur", () => {
             editBtn.removeAttribute("disabled");
             checkInput.removeAttribute("disabled");
@@ -143,34 +95,22 @@ const listGroupHandler = (e) => {
             listPara.classList.remove("hidden");
             newTextInput.remove();
         });
-    }
-    if (e.target.classList.contains("deleteBtn")) {
-        // console.log("u delete");
+    });
+
+    deleteBtn.addEventListener("click", () => {
         if (window.confirm("Are you sure to delete this task?")) {
             list.remove();
         }
         updateDoneTask();
         updateTaskTotal();
-    }
-    if (e.target.classList.contains("checkInput")) {
-        // console.log("you click on checkbox");
-        updateDoneTask();
-        listPara.classList.toggle("line-through");
-        list.classList.toggle("opacity-70");
-        list.classList.toggle("scale-90");
-        list.classList.add("duration-200");
-        // list.classList.toggle("rotate-90");
-        // list.classList.toggle("origin-top-left");
-        checkInput.checked
-            ? editBtn.setAttribute("disabled", true)
-            : editBtn.removeAttribute("disabled");
-    }
+    });
+
+    return list;
 };
+
 
 // event
 // addBtn.onclick = addList;
 // add onclick=addList() attr value in html
 addBtn.addEventListener("click", addList);
 textInput.addEventListener("change", addList);
-
-listGroup.addEventListener("click", listGroupHandler);
