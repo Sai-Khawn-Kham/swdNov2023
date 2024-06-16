@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List </title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body class="p-3">
+    <h1 class="font-serif font-bold text-3xl text-center mb-3">List UI</h1>
+
+    <div class="bg-zinc-200 rounded-tl-2xl rounded-br-2xl p-3 font-mono">
+        <h3 class="font-serif mb-3">To Do List</h3>
+
+        <input id="textInput" class="w-full mb-7 px-3 py-1 rounded placeholder:text-zinc-500" type="text"
+            placeholder="what need to be done?">
+
+        <div class="" id="listGroup">
+            <div class="list bg-zinc-700 bg-opacity-50 text-zinc-100 px-2 py-1 rounded-tl-2xl rounded-br-2xl mb-2">
+                <input class="listCheckbox accent-zinc-900" type="checkbox">
+                <span class="listText text-black">Clean home</span>
+            </div>
+            <div class="list bg-zinc-700 bg-opacity-50 text-zinc-100 px-2 py-1 rounded-tl-2xl rounded-br-2xl mb-2">
+                <input class="listCheckbox accent-zinc-900" type="checkbox">
+                <span class="listText text-black">Laundry</span>
+            </div>
+            <div class="list bg-zinc-700 bg-opacity-50 text-zinc-100 px-2 py-1 rounded-tl-2xl rounded-br-2xl mb-2">
+                <input class="listCheckbox accent-zinc-900" type="checkbox">
+                <span class="listText text-black">Take a bath</span>
+            </div>
+        </div>
+
+        <template id="listTemplate">
+            <div class="list bg-zinc-700 bg-opacity-50 text-zinc-100 px-2 py-1 rounded-tl-2xl rounded-br-2xl mb-2">
+                <input class="listCheckbox accent-zinc-900" type="checkbox">
+                <span class="listText text-black"></span>
+            </div>
+        </template>
+    </div>
+
+    <script>
+        // selectors
+        const textInput = document.querySelector("#textInput");
+        const listTemplate = document.querySelector("#listTemplate");
+        const listGroup = document.querySelector("#listGroup");
+
+        // action
+        textInput.focus();
+        const addList = (text) => {
+            const list = listTemplate.content.cloneNode(true);
+            list.querySelector(".listText").innerText = text;
+            listGroup.append(list);
+            textInput.value = null;
+        };
+
+        // handlers
+        const addListHandler = () => {
+            if (textInput.value.trim() != "") {
+                addList(textInput.value);
+            }
+        };
+
+        // listeners
+        textInput.addEventListener("change", addListHandler);
+
+    </script>
+</body>
+
+</html>

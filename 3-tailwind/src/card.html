@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card UI</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body class="bg-gray-300">
+    <div class="w-[250px] shadow-xl rounded-lg overflow-hidden m-5">
+        <div id="getDate" class="flex justify-center items-center font-serif bg-green-600 text-9xl text-white h-[200px]">1</div>
+        <div id="dateString" class="flex justify-center items-center font-mono bg-gray-50 h-[50px]">January 1, 2021</div>
+    </div>
+    <div class="w-[250px] shadow-xl rounded-lg overflow-hidden m-5">
+        <div class="">
+            <img class="bg-cover" src="./images/rock600x400.jpg" alt="Hardanger, Norway">
+        </div>
+        <div class="flex justify-center items-center font-mono bg-gray-50 h-[50px]">Hardanger, Norway</div>
+    </div>
+
+    <script>
+        const gDate = document.querySelector("#getDate");
+        const dString = document.querySelector("#dateString");
+        const d = new Date();
+        gDate.innerText = d.getDate();
+        console.log(d.toDateString());
+        dString.innerText = d.toDateString();
+    </script>
+</body>
+
+</html>

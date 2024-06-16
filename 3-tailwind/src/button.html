@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./../node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+    <style>
+        .neuro {
+            border: 1px solid white;
+            box-shadow: 3px 3px 4px 2px #666 inset,
+                -3px -3px 4px 2px #ccc inset,
+                4px 4px 4px 2px #666,
+                -4px -4px 4px 2px #ccc;
+        }
+
+        .neuro-in {
+            box-shadow: 4px 4px 4px 1px #777 inset,
+                        -4px -4px 4px 1px #ccc inset;
+        }
+        .neuro-out{
+            box-shadow: 3px 3px 2px 1px #555,
+                        -3px -3px 2px 1px #ddd;
+        }
+        .my-shadow{
+            box-shadow: 0 10px 7px 0 rgba(6,182,212,0.7);
+        }
+    </style>
+</head>
+
+<body class="p-5">
+
+    <h1 class="font-serif font-bold text-3xl mb-5">Button</h1>
+
+    <div class="border-b-2 border-slate-900 flex gap-5 pt-5 pb-5">
+        <button class="bg-transparent px-8 py-3 text-stone-900 rounded-xl neuro">Shadow</button>
+        <button class="bg-transparent px-8 py-3 text-stone-900 rounded-xl neuro-in">Shadow</button>
+        <button class="bg-transparent px-8 py-3 text-stone-900 rounded-xl neuro-out">Shadow</button>
+    </div>
+
+    <div class="border-b-2 border-slate-900 flex justify-center items-center gap-3 pt-10 pb-5">
+        <button class="relative py-2 px-3 rounded-lg bg-cyan-500 my-shadow">Notification badge <span class="absolute top-0 right-0 bg-pink-500 translate-x-[50%] -translate-y-[50%] py-[2px] px-[6px] text-sm rounded-full">5</span></button>
+    </div>
+
+    <div class="border-b-2 border-slate-900 flex gap-3 pt-10 pb-5">
+        <button class="bg-cyan-500 px-3 py-1 rounded text-white ">Button</button>
+        <button class="bg-pink-500 px-3 py-1 rounded text-white ">Button</button>
+        <button class="bg-orange-500 px-3 py-1 rounded text-white ">Button</button>
+        <button class="bg-amber-400 px-3 py-1 rounded text-white ">Button</button>
+        <button class="bg-lime-500 px-3 py-1 rounded text-white ">Button</button>
+    </div>
+
+    <div class="border-b-2 border-slate-900 flex gap-3 pt-10 pb-5">
+        <button class="bg-transparent px-3 py-1 text-cyan-500 border-2 border-cyan-500 rounded">Outline</button>
+        <button class="bg-transparent px-3 py-1 text-pink-500 border-2 border-pink-500 rounded">Outline</button>
+        <button class="bg-transparent px-3 py-1 text-orange-500 border-2 border-orange-500 rounded">Outline</button>
+        <button class="bg-transparent px-3 py-1 text-amber-500 border-2 border-amber-500 rounded">Outline</button>
+        <button class="bg-transparent px-3 py-1 text-lime-500 border-2 border-lime-500 rounded">Outline</button>
+    </div>
+
+    <div class="border-b-2 border-slate-900 flex gap-3 pt-10 pb-5">
+        <button class="bg-transparent px-3 py-1 text-cyan-500 border-2 border-cyan-500 rounded-full">Pill Btn</button>
+        <button class="bg-transparent px-3 py-1 text-pink-500 border-2 border-pink-500 rounded-full">Pill Btn</button>
+        <button class="bg-transparent px-3 py-1 text-orange-500 border-2 border-orange-500 rounded-full">Pill
+            Btn</button>
+        <button class="bg-transparent px-3 py-1 text-amber-500 border-2 border-amber-500 rounded-full">Pill Btn</button>
+        <button class="bg-transparent px-3 py-1 text-lime-500 border-2 border-lime-500 rounded-full">Pill Btn</button>
+    </div>
+
+    <div class="border-b-2 border-slate-900 flex gap-3 pt-10 pb-5">
+        <button class="bg-cyan-500 px-3 py-1 rounded text-white ">
+            <i class="fa-home fa-solid size-6"></i>
+        </button>
+        <button class="bg-pink-500 px-3 py-1 rounded text-white ">
+            <i class="fa-car fa-solid size-6"></i>
+        </button>
+        <button class="bg-orange-500 px-3 py-1 rounded text-white ">
+            <i class="fa-facebook fa-brands size-6"></i>
+        </button>
+        <button class="bg-amber-400 px-3 py-1 rounded text-white ">
+            <i class="fa-check-circle fa-solid size-6"></i>
+        </button>
+        <button class="bg-lime-500 px-3 py-1 rounded text-white ">
+            <i class="fa-magic fa-solid size-6"></i>
+        </button>
+    </div>
+
+    <div class="border-b-2 border-slate-900 flex gap-3 pt-10 pb-5">
+        <button class="bg-cyan-500 px-3 py-1 rounded-lg size-12 text-white ">
+            <i class="fa-plus fa-solid size-6"></i>
+        </button>
+        <button class="bg-pink-500 px-3 py-1 rounded-tr-2xl rounded-bl-2xl text-white ">
+            <i class="fa-minus fa-solid size-6"></i>
+        </button>
+        <button class="bg-orange-500 px-3 py-2 rounded-full text-white ">
+            <i class="fa-multiply fa-solid size-6"></i>
+        </button>
+        <button class="bg-amber-400 px-5 py-1 rounded-[60%] text-white ">
+            <i class="fa-divide fa-solid "></i>
+        </button>
+        <button class="bg-lime-500 px-3 py-1 rounded-tr-3xl rounded-br-3xl rounded-bl-3xl text-white ">
+            <i class="fa-address-book fa-solid size-6"></i>
+        </button>
+    </div>
+
+    <div class="border-b-2 border-slate-900 flex gap-5 pt-10 pb-5">
+        <button class="bg-cyan-500 px-5 py-2 text-white rounded-tl-2xl rounded-tr-2xl">Button</button>
+        <button class="bg-cyan-500 px-5 py-2 text-white rounded-bl-2xl rounded-tr-2xl">Button</button>
+    </div>
+
+</body>
+
+</html>

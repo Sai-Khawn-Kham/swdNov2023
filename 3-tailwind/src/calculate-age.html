@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculate Age</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body class="bg-neutral-400">
+    <div class="bg-neutral-300 w-[400px] m-10 p-5">
+        <h3 class="font-serif font-bold text-2xl mb-3">Input your birthday</h3>
+        <div class="flex gap-3">
+            <input class="w-20 px-2 py-1 rounded" type="number" id="dd" placeholder="day">
+            <input class="w-20 px-2 py-1 rounded" type="number" id="mm" placeholder="month">
+            <input class="w-20 px-2 py-1 rounded" type="number" id="yy" placeholder="year">
+            <button class="bg-neutral-500 rounded px-2 py-1" id="calcBtn">Calculate</button>
+        </div>
+        <div class="mt-5">
+            <p id="result"></p>
+        </div>
+    </div>
+
+    <script>
+        const dd = document.querySelector("#dd");
+        const mm = document.querySelector("#mm");
+        const yy = document.querySelector("#yy");
+        const calcBtn = document.querySelector("#calcBtn");
+        const result = document.querySelector("#result");
+
+        let rd; let rm; let ry;
+
+        const calcAge = (d, m, y) => {
+            let td = Number.parseInt(d);
+            let tm = Number.parseInt(m) - 1;
+            let ty = Number.parseInt(y);
+
+            const bDate = new Date(ty, tm, td);
+            const cDate = new Date(2024,1,7);
+
+            let by = bDate.getFullYear();
+            let bm = bDate.getMonth();
+            let bd = bDate.getDate();
+            let cy = cDate.getFullYear();
+            let cm = cDate.getMonth();
+            let cd = cDate.getDate();
+
+            if (bd > cd) {
+                cd += 30;
+                cm -= 1;
+            }
+            if (bm > cm) {
+                cm += 12;
+                cy -= 1;
+            }
+
+            ry = cy - by;
+            rm = cm - bm;
+            rd = cd - bd;
+
+            return `You are ${ry} years, ${rm} months and ${rd} days old.`;
+        }
+        
+        const calcAgeHandler = () => {
+            let para = calcAge(dd.value,mm.value,yy.value);
+            result.innerText = para;
+        }
+
+        calcBtn.addEventListener("click", calcAgeHandler);
+    </script>
+</body>
+
+</html>

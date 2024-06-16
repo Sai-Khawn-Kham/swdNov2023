@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card UI</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+    <style>
+        .my-shadow{
+            box-shadow: 1px 5px 2px 0 #444,
+                        0 -1px 2px 0 #444;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div class="flex items-center mx-auto w-[600px] rounded-3xl mt-10 my-shadow">
+            <div class="bg-purple-500 z-10 w-[300px] rounded-3xl px-3 py-10">
+                <h5 class="font-bold text-lg text-gray-600 text-center">Your Result</h5>
+                <div class=" bg-purple-800 p-5 rounded-full w-[150px] mx-auto my-10">
+                    <div class="text-white text-8xl text-center">76</div>
+                    <p class="text-gray-500 text-center font-bold">of 100</p>
+                </div>
+                <h5 class="font-bold text-white text-center text-lg">Great</h5>
+                <p class="text-gray-300 text-center">You scored higher than 65% of the people who have taken these tests.
+                </p>
+            </div>
+            <div class="w-[340px] rounded-3xl -m-10 pl-14 pr-3 py-5">
+                <h3 class="font-serif font-bold text-3xl mb-3">Summary</h3>
+                <div class="flex flex-col justify-evenly gap-6">
+                    <div class="bg-pink-200 px-3 py-3 rounded-lg flex justify-between items-center">
+                        <div class="">
+                            <p><i class="fa-bolt-lightning fa-solid"></i> Reaction</p>
+                        </div>
+                        <div>
+                            <p>80/100</p>
+                        </div>
+                    </div>
+                    <div class="bg-yellow-200 px-3 py-3 rounded-lg flex justify-between items-center">
+                        <div class="">
+                            <p><i class="fa-brain fa-solid"></i> Memory</p>
+                        </div>
+                        <div>
+                            <p>80/100</p>
+                        </div>
+                    </div>
+                    <div class="bg-green-200 px-3 py-3 rounded-lg flex justify-between items-center">
+                        <div class="">
+                            <p><i class="fa-book-open fa-solid"></i> Vocabulary</p>
+                        </div>
+                        <div>
+                            <p>80/100</p>
+                        </div>
+                    </div>
+                    <div class="bg-pink-200 px-3 py-3 rounded-lg flex justify-between items-center">
+                        <div class="">
+                            <p><i class="fa-eye fa-solid"></i> Visual</p>
+                        </div>
+                        <div>
+                            <p>67/100</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex justify-center items-center">
+                    <button class="w-[200px] bg-purple-800 text-white font-bold mt-5 px-5 py-3 rounded-2xl">continue</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        
+    </div>
+</body>
+
+</html>
