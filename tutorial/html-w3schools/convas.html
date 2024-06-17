@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas</title>
+</head>
+<body>
+    <h1>Canvas</h1>
+
+    <canvas id="myCanvas" style="width:400px;height:300px">
+        Your browser doesn't support canvas.
+    </canvas>
+
+    <script>
+        let c = document.querySelector("#myCanvas");
+        let ctx = c.getContext("2d");
+
+        ctx.fillStyle = "red";
+        ctx.fillRect(20,20,75,50);
+
+        // turn transparency on
+        ctx.globalAlpha = 0.4;
+        ctx.fillStyle = "blue";
+        ctx.fillRect(50,50,75,50);
+
+        ctx.fillStyle = "green";
+        ctx.fillRect(80,80,75,50);
+    </script>
+</body>
+</html>
