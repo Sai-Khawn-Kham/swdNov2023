@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color</title>
+    <link rel="stylesheet" href="./css/color-testing.css">
+</head>
+
+<body>
+    <main class="p-5 w-[600px]">
+        <h1 class="font-serif font-bold text-3xl text-center mb-3">Color</h1>
+
+        <div class="w-[600px]">
+            <div class="w-[400px] mx-auto px-5 py-3 text-center font-mono font-bold mb-5" id="playGround">
+                rgb( 255, 0, 0)
+            </div>
+        </div>
+
+        <div class="flex flex-row w-[600px]">
+            <div class="flex flex-col w-[200px] justify-center items-center">
+                <label for="redInput">Red</label>
+                <input type="range" id="redInput" min="0" max="255" value="255">
+                <p id="showRed"></p>
+            </div>
+            <div class="flex flex-col w-[200px] justify-center items-center">
+                <label for="greenInput">Green</label>
+                <input type="range" id="greenInput" min="0" max="255" value="0">
+                <p id="showGreen"></p>
+            </div>
+            <div class="flex flex-col w-[200px] justify-center items-center">
+                <label for="blueInput">Blue</label>
+                <input type="range" id="blueInput" min="0" max="255" value="0">
+                <p id="showBlue"></p>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        const redInput = document.querySelector("#redInput");
+        const greenInput = document.querySelector("#greenInput");
+        const blueInput = document.querySelector("#blueInput");
+        const playGround = document.querySelector("#playGround");
+        const showRed = document.querySelector("#showRed");
+        const showGreen = document.querySelector("#showGreen");
+        const showBlue = document.querySelector("#showBlue");
+
+        playGround.style.backgroundColor = "rgb(255,0,0)";
+        showRed.innerText = "255";
+        showGreen.innerText = `0`;
+        showBlue.innerText = `0`;
+
+        const changeColor = (red, green, blue) => {
+            playGround.style.backgroundColor = `rgb(${red},${green},${blue})`;
+            playGround.innerText = `rgb(${red}, ${green}, ${blue})`;
+            showRed.innerText = `${red}`;
+            showGreen.innerText = `${green}`;
+            showBlue.innerText = `${blue}`;
+        }
+
+        const changeColorHandler = () => {
+            changeColor(redInput.valueAsNumber, greenInput.valueAsNumber, blueInput.valueAsNumber);
+        };
+
+        redInput.addEventListener("change", changeColorHandler);
+        greenInput.addEventListener("change", changeColorHandler);
+        blueInput.addEventListener("change", changeColorHandler);
+
+    </script>
+</body>
+
+</html>
