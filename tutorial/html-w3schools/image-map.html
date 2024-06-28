@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="./images/workplace.jpg" alt="Workplace" usemap="#map1" width="400" height="379">
+    <map name="map1">
+        <area shape="rect" coords="34,44,270,350" href="javascript:alert('you click the computer');" alt="computer">
+        <area shape="rect" coords="290,172,333,250" alt="Phone" href="javascript:alert('you click the phone');">
+        <area shape="circle" coords="337,300,44" href="javascript:alert('you click the coffee cup')" alt="">
+    </map>
+
+    <br>
+
+    <img src="./images/frenchfood.jpg" alt="French Food" usemap="#foodmap" width="450" height="675">
+    <map name="foodmap">
+        <area shape="poly"
+            coords="140,121,181,116,204,160,204,222,191,270,140,329,85,355,58,352,37,322,40,259,103,161,128,147"
+            alt="Croissant" href="javascript:alert('you click the croissant')">
+    </map>
+</body>
+</html>
