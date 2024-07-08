@@ -4,6 +4,7 @@ export default {
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
     "./node_modules/preline/dist/*.js",
+    "./node_modules/flowbite/**/*.js",
   ],
   darkMode: "class",
   theme: {
@@ -11,6 +12,7 @@ export default {
   },
   plugins: [
     require("preline/plugin"),
+    require("flowbite/plugin"),
   ],
 }
 

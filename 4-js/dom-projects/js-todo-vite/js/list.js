@@ -1,6 +1,7 @@
 export const tasks = ["To read JS Book","Sleep Early","Eat Yoga"];
-
+import Swal from "sweetalert2";
 import { listGroup } from "./selectors.js";
+import { v4 as uuidv4 } from 'uuid';
 
 export const updateTaskTotal = () => {
     const listTotal = document.querySelectorAll(".list");
@@ -12,7 +13,7 @@ export const updateDoneTask = () => {
 };
 export const createNewList = (currentTask) => {
     const list = listTemplate.content.cloneNode(true);
-    list.querySelector(".list").id = "list" + Date.now();
+    list.querySelector(".list").id = "list" + uuidv4();
     list.querySelector(".listPara").innerText = currentTask;
     return list;
 };
@@ -28,12 +29,13 @@ export const checkList = (listId) => {
     const editBtn = currentList.querySelector(".editBtn");
     // updateDoneTask();
     listPara.classList.toggle("line-through");
+    // listPara.innerText = "you check list";
     currentList.classList.toggle("opacity-70");
     currentList.classList.toggle("scale-90");
-    currentList.classList.add("duration-200");
     checkInput.checked
         ? editBtn.setAttribute("disabled", true)
         : editBtn.removeAttribute("disabled");
+    console.log("you check list");
 };
 export const editList = (listId) => {
     const currentList = document.querySelector(`#${listId}`);
@@ -50,13 +52,6 @@ export const editList = (listId) => {
     newTextInput.value = currentText;
     listPara.after(newTextInput);
     newTextInput.focus();
-    newTextInput.addEventListener("blur", () => {
-        editBtn.removeAttribute("disabled");
-        checkInput.removeAttribute("disabled");
-        listPara.innerText = newTextInput.value;
-        listPara.classList.remove("hidden");
-        newTextInput.remove();
-    });
     newTextInput.addEventListener("keyup",(e) => {
         if (e.key == "Enter") {
             editBtn.removeAttribute("disabled");
@@ -69,12 +64,28 @@ export const editList = (listId) => {
 };
 export const deleteList = (listId) => {
     const currentList = document.querySelector(`#${listId}`);
-    if (window.confirm("Are you sure to delete this task?")) {
-        currentList.classList.add("animate__animated", "animate__hinge");
-        currentList.addEventListener("animationend", () => {
-            currentList.remove();
-            // updateDoneTask();
-            // updateTaskTotal();
-        });
-    }
+    // if (window.confirm("Are you sure to delete this task?")) {
+    //     currentList.classList.add("animate__animated", "animate__hinge");
+    //     currentList.addEventListener("animationend", () => {
+    //         currentList.remove();
+    //         // updateDoneTask();
+    //         // updateTaskTotal();
+    //     });
+    // }
+    Swal.fire({
+        title: "Are you sure?",
+        text: "You won't be able to revert this!",
+        icon: "warning",
+        showCancelButton: true,
+        // confirmButtonColor: "#3085d6",
+        // cancelButtonColor: "d33",
+        confirmButtonText: "Yes, delete it!",
+    }).then((result) => {
+        if(result.isConfirmed){
+            currentList.classList.add("animate__animated", "animate__hinge");
+            currentList.addEventListener("animationend", () => {
+                currentList.remove();
+            });
+        }
+    });
 };

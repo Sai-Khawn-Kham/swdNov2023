@@ -37,7 +37,7 @@
             let ty = Number.parseInt(y);
 
             const bDate = new Date(ty, tm, td);
-            const cDate = new Date(2024,1,7);
+            const cDate = new Date();
 
             let by = bDate.getFullYear();
             let bm = bDate.getMonth();
@@ -50,14 +50,15 @@
                 cd += 30;
                 cm -= 1;
             }
+            rd = cd - bd;
+            
             if (bm > cm) {
                 cm += 12;
                 cy -= 1;
             }
+            rm = cm - bm;
 
             ry = cy - by;
-            rm = cm - bm;
-            rd = cd - bd;
 
             return `You are ${ry} years, ${rm} months and ${rd} days old.`;
         }
