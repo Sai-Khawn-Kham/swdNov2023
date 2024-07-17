@@ -4,10 +4,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .cover{
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+        .rotating{
+            animation: rotating 3s linear infinite;
+        }
+        @keyframes rotating {
+            from{
+                transform: rotate(0);
+            }
+            to{
+                transform: rotate(360deg);
+            }
+        }
+        #playMusicBtn{
+            width: 100px;
+            height: 30px;
+            border-radius: 20px;
+        }
+        #stopBtn{
+            width: 100px;
+            height: 30px;
+            border-radius: 20px;
+        }
+    </style>
 </head>
 <body>
-    <h1>JavaScript Basic</h1>
+    <h1 id="myTitle">JavaScript Basic</h1>
 
-    <script src="./array.js"></script>
+    <div>
+        <img class="cover" src="./images/FB_20190804_130712_238.jpg" alt="sai khawn">
+    </div>
+
+    <audio id="mySong" src="./audio/to_the_bone.mp3" controls></audio>
+    <br>
+    <button id="playMusicBtn">Play</button>
+    <button id="stopBtn">stop</button>
+
+    <br><br>
+
+    <input type="number" name="numInput" id="numInput">
+    <br>
+
+    <button id="addListBtn">add list</button>
+    <div id="listGroup"></div>
+
+    <template id="listTemplate">
+        <ul>
+            <li>item 1</li>
+            <li>item 2</li>
+            <li>item 3</li>
+        </ul>
+    </template>
+
+    <script src="./dom-classes-interface.js"></script>
 </body>
 </html>
